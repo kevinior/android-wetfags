@@ -135,11 +135,11 @@ public class MainActivity extends Activity implements OnCheckedChangeListener, O
 		switch (myPager.getCurrentItem())
 		{
 			case 0:
-				updateWetfagsValues(weight, age);
+				update5AsValues(weight, age);
 				break;
 			
 			case 1:
-				update5AsValues(weight, age);
+				updateWetfagsValues(weight, age);
 				break;
 			
 			case 2:
