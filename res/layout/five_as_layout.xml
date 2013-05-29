@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    xmlns:app="http://schemas.android.com/apk/res/se.orourke.wetfags" >
+
+    <RelativeLayout
+        android:id="@+id/five_as_rel_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <se.orourke.wetfags.TitleDetailValueView
+            android:id="@+id/a1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            app:detailText="@string/a1_formula"
+            app:titleText="@string/a_label"
+            app:valueText="@string/a1_format" />
+            
+        <se.orourke.wetfags.TitleDetailValueView
+            android:id="@+id/a2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/a1"
+            app:detailText="@string/a2_formula"
+            app:titleText="@string/a2_label"
+            app:valueText="@string/unknown_val" />
+
+        <se.orourke.wetfags.TitleDetailValueView
+            android:id="@+id/a3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/a2"
+            app:detailText="@string/a3_formula"
+            app:titleText="@string/a3_label"
+            app:valueText="@string/a3_format" />
+
+                <se.orourke.wetfags.TitleDetailValueView
+            android:id="@+id/a4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/a3"
+            app:detailText="@string/a4_formula"
+            app:titleText="@string/a4_label"
+            app:valueText="@string/unknown_val" />
+
+                <se.orourke.wetfags.TitleDetailValueView
+            android:id="@+id/a5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/a4"
+            app:detailText="@string/a5_formula"
+            app:titleText="@string/a5_label"
+            app:valueText="@string/unknown_val" />
+
+        </RelativeLayout>
+
+</ScrollView>

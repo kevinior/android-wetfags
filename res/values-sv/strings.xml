@@ -5,8 +5,8 @@
     <string name="kg_btn_label">kg</string>
     <string name="w_label">Weight</string>
     <string name="w_lt_1_formula">&lt;1år: (månader/2)+4</string>
-    <string name="w_1_5_formula">(år × 2) + 8</string>
-    <string name="w_6_12_formula">(år × 3) + 7</string>
+    <string name="w_1_5_formula">1–5år: (år × 2) + 8</string>
+    <string name="w_6_12_formula">6–12 år: (år × 3) + 7</string>
     <string name="w_format">%d kg</string>
     <string name="e_label">Energy</string>
     <string name="e_formula">4 J/kg vid defibrillering</string>

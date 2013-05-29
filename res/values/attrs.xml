@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TitleDetailValueView">
+        <attr name="titleText" format="string" />
+        <attr name="detailText" format="string" />
+        <attr name="valueText" format="string" />
+        <attr name="hideTitle" format="boolean" />
+    </declare-styleable>
+</resources>

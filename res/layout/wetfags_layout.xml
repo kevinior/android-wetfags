@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent" 
+    xmlns:app="http://schemas.android.com/apk/res/se.orourke.wetfags" >
 
     <RelativeLayout
         android:id="@+id/wetfags_rel_layout"
@@ -9,384 +10,86 @@
         android:layout_height="wrap_content"
         android:orientation="vertical" >
 
-        <TextView
-            android:id="@+id/w_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/w_label"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        <TextView
-            android:id="@+id/w_value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_below="@id/w_label"
-            android:gravity="right"
-            android:text="@string/unknown_val"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        <TextView
-            android:id="@+id/w_formula"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@id/w_value"
-            android:layout_alignParentLeft="true"
-            android:layout_toLeftOf="@id/w_value"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:text="@string/w_lt_1_formula"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
-
-        <TextView
-            android:id="@+id/e_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/w_value"
-            android:text="@string/e_label"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        <TextView
-            android:id="@+id/e_value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_below="@id/e_label"
-            android:gravity="right"
-            android:text="@string/unknown_val"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        <TextView
-            android:id="@+id/e_formula"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@id/e_value"
-            android:layout_alignParentLeft="true"
-            android:layout_toLeftOf="@id/e_value"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:text="@string/e_formula"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
-
-        <TextView
-            android:id="@+id/t_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/e_value"
-            android:text="@string/t_label"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        <TextView
-            android:id="@+id/t_value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_below="@id/t_label"
-            android:gravity="right"
-            android:text="@string/unknown_val"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        <TextView
-            android:id="@+id/t_formula"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@id/t_value"
-            android:layout_alignParentLeft="true"
-            android:layout_toLeftOf="@id/t_value"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:text="@string/t_formula"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
-
-        <TextView
-            android:id="@+id/f_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/t_value"
-            android:text="@string/f_label"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        <TextView
-            android:id="@+id/f_value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_below="@id/f_label"
-            android:gravity="right"
-            android:text="@string/unknown_val"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        <TextView
-            android:id="@+id/f_formula"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@id/f_value"
-            android:layout_alignParentLeft="true"
-            android:layout_toLeftOf="@id/f_value"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:text="@string/f_formula"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
-
-        <TextView
-            android:id="@+id/a_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/f_value"
-            android:text="@string/a_label"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        <TextView
-            android:id="@+id/a_value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_below="@id/a_label"
-            android:gravity="right"
-            android:text="@string/unknown_val"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        <TextView
-            android:id="@+id/a_formula"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@id/a_value"
-            android:layout_alignParentLeft="true"
-            android:layout_toLeftOf="@id/a_value"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:text="@string/a_formula"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
-
-        <TextView
-            android:id="@+id/g_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/a_value"
-            android:text="@string/g_label"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        <TextView
-            android:id="@+id/g_value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_below="@id/g_label"
-            android:gravity="right"
-            android:text="@string/unknown_val"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        <TextView
-            android:id="@+id/g_formula"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@id/g_value"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_toLeftOf="@id/g_value"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:text="@string/g_formula"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
-
-        <TextView
-            android:id="@+id/s_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/g_value"
-            android:text="@string/s_label"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        <TextView
-            android:id="@+id/s_iv_value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_below="@id/s_label"
-            android:gravity="right"
-            android:text="@string/unknown_val"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        <TextView
-            android:id="@+id/s_iv_formula"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@id/s_iv_value"
-            android:layout_alignParentLeft="true"
-            android:layout_toLeftOf="@id/s_iv_value"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:text="@string/s_iv_formula"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
-
-        <TextView
-            android:id="@+id/s_pr_value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_below="@id/s_iv_value"
-            android:gravity="right"
-            android:text="@string/unknown_val"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        <TextView
-            android:id="@+id/s_pr_formula"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@id/s_pr_value"
-            android:layout_alignParentLeft="true"
-            android:layout_toLeftOf="@id/s_pr_value"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:text="@string/s_pr_formula"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
-
-        <TextView
-            android:id="@+id/a1_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/s_pr_value"
-            android:text="@string/a_label"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        <TextView
-            android:id="@+id/a1_value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_below="@id/a1_label"
-            android:text="@string/a1_format"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        <TextView
-            android:id="@+id/a1_formula"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@id/a1_value"
-            android:layout_alignParentLeft="true"
-            android:layout_toLeftOf="@id/a1_value"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:text="@string/a1_formula"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
-
-        <TextView
-            android:id="@+id/a2_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/a1_value"
-            android:text="@string/a2_label"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        <TextView
-            android:id="@+id/a2_value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_below="@id/a2_label"
-            android:text="@string/unknown_val"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        <TextView
-            android:id="@+id/a2_formula"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@id/a2_value"
-            android:layout_alignParentLeft="true"
-            android:layout_toLeftOf="@id/a2_value"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:text="@string/a2_formula"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
-
-        <TextView
-            android:id="@+id/a3_label"
-            android:layout_width="wrap_content"
+        <se.orourke.wetfags.TitleDetailValueView
+            android:id="@+id/weight"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:layout_below="@id/a2_value"
-            android:text="@string/a3_label"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        <TextView
-            android:id="@+id/a3_value"
-            android:layout_width="wrap_content"
+            android:layout_alignParentTop="true"
+            app:detailText="@string/w_lt_1_formula"
+            app:titleText="@string/w_label"
+            app:valueText="@string/unknown_val" />
+        
+        <se.orourke.wetfags.TitleDetailValueView
+            android:id="@+id/energy"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_below="@id/a3_label"
-            android:text="@string/a3_format"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        <TextView
-            android:id="@+id/a3_formula"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@id/a3_value"
             android:layout_alignParentLeft="true"
-            android:layout_toLeftOf="@id/a3_value"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:text="@string/a3_formula"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
-
-        <TextView
-            android:id="@+id/a4_label"
-            android:layout_width="wrap_content"
+            android:layout_below="@id/weight"
+            app:detailText="@string/e_formula"
+            app:titleText="@string/e_label"
+            app:valueText="@string/unknown_val" />
+        
+        <se.orourke.wetfags.TitleDetailValueView
+            android:id="@+id/tube"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/a3_value"
-            android:text="@string/a4_label"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        <TextView
-            android:id="@+id/a4_value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_below="@id/a4_label"
-            android:text="@string/unknown_val"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        <TextView
-            android:id="@+id/a4_formula"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@id/a4_value"
             android:layout_alignParentLeft="true"
-            android:layout_toLeftOf="@id/a4_value"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:text="@string/a4_formula"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
-
-        <TextView
-            android:id="@+id/a5_label"
-            android:layout_width="wrap_content"
+            android:layout_below="@id/energy"
+            app:detailText="@string/t_formula"
+            app:titleText="@string/t_label"
+            app:valueText="@string/unknown_val" />
+        
+        <se.orourke.wetfags.TitleDetailValueView
+            android:id="@+id/fluids"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/a4_value"
-            android:text="@string/a5_label"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        <TextView
-            android:id="@+id/a5_value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_below="@id/a5_label"
-            android:text="@string/unknown_val"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        <TextView
-            android:id="@+id/a5_formula"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@id/a5_value"
             android:layout_alignParentLeft="true"
-            android:layout_toLeftOf="@id/a5_value"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:text="@string/a5_formula"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:layout_below="@id/tube"
+            app:detailText="@string/f_formula"
+            app:titleText="@string/f_label"
+            app:valueText="@string/unknown_val" />
+        
+        <se.orourke.wetfags.TitleDetailValueView
+            android:id="@+id/adrenaline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/fluids"
+            app:detailText="@string/a_formula"
+            app:titleText="@string/a_label"
+            app:valueText="@string/unknown_val" />
+        
+        <se.orourke.wetfags.TitleDetailValueView
+            android:id="@+id/glucose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/adrenaline"
+            app:detailText="@string/g_formula"
+            app:titleText="@string/g_label"
+            app:valueText="@string/unknown_val" />
+        
+        <se.orourke.wetfags.TitleDetailValueView
+            android:id="@+id/stesolid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/glucose"
+            app:detailText="@string/s_iv_formula"
+            app:titleText="@string/s_label"
+            app:valueText="@string/unknown_val" />
+        
+        <se.orourke.wetfags.TitleDetailValueView
+            android:id="@+id/stesolid_pr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/stesolid"
+            app:detailText="@string/s_pr_formula"
+            app:hideTitle="true"
+            app:titleText="@string/s_label"
+            app:valueText="@string/unknown_val" />
     </RelativeLayout>
 
 </ScrollView>
