@@ -41,10 +41,10 @@ public class MainActivity extends Activity implements OnCheckedChangeListener, O
             int resId = 0;
             switch (position) {
 	            case 0:
-	                resId = R.layout.wetfags_layout;
+	            	resId = R.layout.five_as_layout;
 	                break;
 	            case 1:
-	            	resId = R.layout.five_as_layout;
+	                resId = R.layout.wetfags_layout;
 	            	break;
 	            case 2:
 	                resId = R.layout.parameters_layout;
@@ -54,6 +54,11 @@ public class MainActivity extends Activity implements OnCheckedChangeListener, O
             ((ViewPager) container).addView(view, 0);
             return view;
         }
+
+		@Override
+		public CharSequence getPageTitle(int position) {
+			return getResources().getStringArray(R.array.tabs)[position];
+		}
 		
 	}
 
@@ -73,6 +78,7 @@ public class MainActivity extends Activity implements OnCheckedChangeListener, O
 				updateValues();
 			}
 	    });
+	    myPager.setCurrentItem(1);
 	    
 		RadioGroup monthYearKgGroup = (RadioGroup) findViewById(R.id.monthsYearsKgRadioGroup);
 		monthYearKgGroup.setOnCheckedChangeListener(this);

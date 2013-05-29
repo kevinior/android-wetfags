@@ -3,6 +3,12 @@
 
     <string name="app_name">Wetfags</string>
     
+    <string-array name="tabs">
+        <item >5 As</item>
+        <item >WETFAGS</item>
+        <item >Parameters</item>
+    </string-array>
+    
     <string name="years_btn_label">yrs</string>
     <string name="months_btn_label">mo</string>
     <string name="kg_btn_label">kg</string>
