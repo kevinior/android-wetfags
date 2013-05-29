@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <string name="app_name">Wetfags</string>
+    <string name="action_settings">Settings</string>
+    
+    <string name="years_btn_label">yrs</string>
+    <string name="months_btn_label">mo</string>
+    <string name="kg_btn_label">kg</string>
+    <string name="w_label">Weight</string>
+    <string name="w_lt_1_formula">&lt;1 year: (months/2)+4</string>
+    <string name="w_1_5_formula">(years × 2) + 8</string>
+    <string name="w_6_12_formula">(years × 3) + 7</string>
+    <string name="w_format">%d kg</string>
+    <string name="e_label">Energy</string>
+    <string name="e_formula">4 J/kg vid defibrillering</string>
+    <string name="e_format">%d J</string>
+    <string name="t_label">Tube</string>
+    <string name="t_formula">(age / 4) + 4</string>
+    <string name="t_format">%.1f</string>
+    <string name="f_label">Fluids</string>
+    <string name="f_formula">10–20 ml/kg</string>
+    <string name="f_format">%1$d–%2$d ml</string>
+    <string name="a_label">Adrenaline</string>
+    <string name="a_formula">10 µg/kg IV/IM, 0.1 mg/ml</string>
+    <string name="a_format">%.1f ml</string>
+    <string name="g_label">Glucose</string>
+    <string name="g_formula">2 ml/kg × 10 %</string>
+    <string name="g_format">%d ml 10 %%</string>
+    <string name="s_label">Stesolid</string>
+    <string name="s_iv_formula">0.25 mg/kg IV</string>
+    <string name="s_iv_format">%.1f mg IV</string>
+    <string name="s_pr_formula">0.5 mg/kg PR</string>
+    <string name="s_pr_format">%.1f mg PR</string>
+    <string name="unknown_val">\???</string>
+    <string name="a1_formula">5 ml × 1 mg/ml Inh via nebulisator</string>
+    <string name="a1_format">5 ml Inh</string>
+    <string name="a2_label">Albuterol</string>
+    <string name="a2_formula">2.5 mg &lt; 5 år, 5 mg &gt; 5 år Inh</string>
+    <string name="a2_format">%.1f mg Inh</string>
+    <string name="a3_label">Atrovent</string>
+    <string name="a3_formula">0.25 mg Inh</string>
+    <string name="a3_format">0.25 mg Inh</string>
+    <string name="a4_label">Atropin</string>
+    <string name="a4_formula">20 µg/kg</string>
+    <string name="a4_format">%.1f mg IV</string>
+    <string name="a5_label">Amiodaron</string>
+    <string name="a5_formula">5 mg/kg i 5 % glukos</string>
+    <string name="a5_format">%d mg</string>
+</resources>
