@@ -161,34 +161,34 @@ public class MainActivity extends Activity implements OnCheckedChangeListener, O
 			setTDVText(R.id.stesolid, R.string.unknown_val);
 			setTDVText(R.id.stesolid_pr, R.string.unknown_val);
 		} else {
-			setTDVText(R.id.weight, String.format(getString(R.string.w_format), weight));
+			setTDVText(R.id.weight, getString(R.string.w_format, weight));
 			
 			int energy = 4*weight;
-			setTDVText(R.id.energy, String.format(getString(R.string.e_format), energy));
+			setTDVText(R.id.energy, getString(R.string.e_format, energy));
 			
 			if (age < 0.0)
 				setTDVText(R.id.tube, R.string.unknown_val);
 			else
 			{
 				double tube = (age/4.0) + 4.0;
-				setTDVText(R.id.tube, String.format(getString(R.string.t_format), Math.round( tube * 2.0 ) / 2.0));
+				setTDVText(R.id.tube, getString(R.string.t_format, Math.round( tube * 2.0 ) / 2.0));
 			}
 			
 			int fluids_low = 10*weight;
 			int fluids_high = 20*weight;
-			setTDVText(R.id.fluids, String.format(getString(R.string.f_format), fluids_low, fluids_high));
+			setTDVText(R.id.fluids, getString(R.string.f_format, fluids_low, fluids_high));
 			
 			double adrenaline_ug = 0.010*weight; // mg
 			double adrenaline_ml = adrenaline_ug / 0.1; // 0.1 mg/ml
-			setTDVText(R.id.adrenaline, String.format(getString(R.string.a_format), adrenaline_ml));
+			setTDVText(R.id.adrenaline, getString(R.string.a_format, adrenaline_ml));
 			
 			int glucose = 2*weight;
-			setTDVText(R.id.glucose, String.format(getString(R.string.g_format), glucose));
+			setTDVText(R.id.glucose, getString(R.string.g_format, glucose));
 			
 			double stesolid_iv = 0.25*weight;
 			double stesolid_pr = 0.5*weight;
-			setTDVText(R.id.stesolid, String.format(getString(R.string.s_iv_format), stesolid_iv));
-			setTDVText(R.id.stesolid_pr, String.format(getString(R.string.s_pr_format), stesolid_pr));
+			setTDVText(R.id.stesolid, getString(R.string.s_iv_format, stesolid_iv));
+			setTDVText(R.id.stesolid_pr, getString(R.string.s_pr_format, stesolid_pr));
 		}
 	}
 	
@@ -196,6 +196,22 @@ public class MainActivity extends Activity implements OnCheckedChangeListener, O
 	{
 		if (findViewById(R.id.five_as_rel_layout) == null)
 			return;
+		
+		int mg_adrenaline = 2;
+		TitleDetailValueView a1_view = (TitleDetailValueView) findViewById(R.id.a1);
+		if (age < 0.0)
+			a1_view.setValue(R.string.unknown_val);
+		else
+		{
+			int formula = R.string.a1_gt_2_formula;
+			if (age <= 2.0)
+			{
+				formula = R.string.a1_formula;
+				mg_adrenaline = 1;
+			}
+			a1_view.setDetail(formula);
+			a1_view.setValue(getString(R.string.a1_format, mg_adrenaline));
+		}
 
 		double albuterol = 2.5;
 		if (age < 0.0)
@@ -203,7 +219,7 @@ public class MainActivity extends Activity implements OnCheckedChangeListener, O
 		else
 		{
 			if (age >= 5.0) albuterol = 5.0;
-			setTDVText(R.id.a2, String.format(getString(R.string.a2_format), albuterol));
+			setTDVText(R.id.a2, getString(R.string.a2_format, albuterol));
 		}
 		
 		if (weight < 0)
@@ -214,10 +230,10 @@ public class MainActivity extends Activity implements OnCheckedChangeListener, O
 		else
 		{
 			double atropine = 0.020 * weight;
-			setTDVText(R.id.a4, String.format(getString(R.string.a4_format), atropine));
+			setTDVText(R.id.a4, getString(R.string.a4_format, atropine));
 			
 			int amiodarone = 5 * weight;
-			setTDVText(R.id.a5, String.format(getString(R.string.a5_format), amiodarone));
+			setTDVText(R.id.a5, getString(R.string.a5_format, amiodarone));
 		}
 }
 	

@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="a1_formula">5 ml × 1 mg/ml Inh via nebuliser</string>
+    <string name="a1_formula">1 mg × 1 mg/ml Inh via nebuliser</string>
+    <string name="a1_gt_2_formula">2 mg × 1mg/ml Inh via nebuliser</string>
+    <string name="a1_format">%d ml</string>
 </resources>

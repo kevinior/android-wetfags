@@ -35,8 +35,9 @@
     <string name="s_pr_formula">0.5 mg/kg PR</string>
     <string name="s_pr_format">%.1f mg PR</string>
     <string name="unknown_val">\???</string>
-    <string name="a1_formula">5 ml × 1 mg/ml Inh via nebulisator</string>
-    <string name="a1_format">5 ml Inh</string>
+    <string name="a1_formula">1 mg × 1 mg/ml Inh via nebulisator</string>
+    <string name="a1_gt_2_formula">2 mg × 1mg/ml Inh via nebulisator</string>
+    <string name="a1_format">%d ml</string>
     <string name="a2_label">Albuterol</string>
     <string name="a2_formula">2.5 mg &lt; 5 år, 5 mg &gt; 5 år Inh</string>
     <string name="a2_format">%.1f mg Inh</string>
